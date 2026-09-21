@@ -1,1 +1,15 @@
 
+import React ,{useState} from 'react'
+import "../styles/Child.css"
+
+const Selection = ({applyColor}) => {
+
+    const [style, setStyle] = useState({background:""})
+  return (
+    <div className="fix-box" style={style} onClick={()=>{console.log("Box");applyColor(setStyle)}}>
+        Selection
+    </div>
+  )
+}
+
+export default Selection
