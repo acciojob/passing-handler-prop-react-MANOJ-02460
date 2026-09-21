@@ -1,14 +1,10 @@
 import React from 'react';
 
-const ColourSelector = ({ config, selectNextBackground }) => {
-  const { background, key, classname, label } = config;
-
+const ColourSelector = (props) => {
+  const { config, selectNextBackground } = props
+  const { background, label, classname } = config;
   return (
-    <button
-      className={classname}
-      data-testid={key}               // Added data-testid for Cypress
-      onClick={() => selectNextBackground(background)}
-    >
+    <button className={classname} onClick={() => selectNextBackground({background: background})}>
       {label}
     </button>
   )
