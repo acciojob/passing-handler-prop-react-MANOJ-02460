@@ -34,7 +34,7 @@ const App = () => {
     <div id="master">
       <h5 className="heading">{title}</h5>
 
-      <div className="row">
+      <div className="row children-wrapper" >
         {colourConfig.map((config) => (
           <ColourSelector
             key={config.key}

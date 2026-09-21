@@ -18,6 +18,12 @@
     align-items: center;
 }
 
+.children-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #master{
     border-radius: 5px;
     border: 2px white ridge;
