@@ -24,9 +24,10 @@ const colourConfig = [{
 const title = 'Select the gradient and then the Box to change the color';
 
 const App = () => {
-  let [nextBackground, selectNextBackground] = useState("")
+  const [nextBackground, selectNextBackground] = useState("");
+
   const applyColor = (updateSelectionStyle) => {
-    updateSelectionStyle({background:nextBackground})
+    updateSelectionStyle({ background: nextBackground });
   }
 
   return (
@@ -34,8 +35,12 @@ const App = () => {
       <h5 className="heading">{title}</h5>
 
       <div className="row">
-        {colourConfig.map((config, index) => (
-          <ColourSelector key={config.key} config={config} selectNextBackground={selectNextBackground} />
+        {colourConfig.map((config) => (
+          <ColourSelector
+            key={config.key}
+            config={config}
+            selectNextBackground={selectNextBackground}
+          />
         ))}
       </div>
 
@@ -49,6 +54,5 @@ const App = () => {
     </div >
   )
 }
-
 
 export default App;
