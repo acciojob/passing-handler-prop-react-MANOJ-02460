@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/Child.css'
 
 const ColourSelector = (props) => {
   const { config, selectNextBackground } = props
