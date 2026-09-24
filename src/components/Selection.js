@@ -7,7 +7,7 @@ const Selection = ({ applyColor }) => {
         <div className="fix-box"
             data-testid="selection-box"
             style={style}
-            onClick={() => applyColor(nextStyle => setStyle(nextStyle))}
+            onClick={() => applyColor(updatedStyle => setStyle(updatedStyle))}
         >
             Selection
         </div>
